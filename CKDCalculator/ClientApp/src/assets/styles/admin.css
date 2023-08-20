@@ -1,0 +1,295 @@
+.admin-main-container {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  min-height: calc(100vh - 80px);
+}
+
+.admin-content-area {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  column-gap: 40px;
+}
+
+.admin-sidebar {
+  padding: 3vh 0;
+  display: grid;
+  grid-template-rows: max-content max-content;
+  row-gap: 15px;
+  align-content: flex-start;
+  width: 300px;
+  position: relative;
+  z-index: 1;
+
+  -webkit-box-shadow: 10px 0px 19px -6px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 10px 0px 19px -6px rgba(0, 0, 0, 0.24);
+  box-shadow: 10px 0px 19px -6px rgba(0, 0, 0, 0.24);
+}
+
+.admin-sidebar-nav-link {
+  user-select: none;
+  font-size: 24px;
+  font-family: 'Roboto Slab';
+  letter-spacing: 1px;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 15px;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 6px 30px;
+  cursor: pointer;
+}
+
+.admin-sidebar-nav-link-clicked {
+  border-left: 10px solid #25466e;
+  padding: 6px 20px;
+  font-weight: 400;
+  color: #25466e;
+}
+
+.admin-patients,
+.admin-my-patients,
+.admin-calculator,
+.admin-subordinates,
+.admin-file {
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  user-select: none;
+  justify-self: center;
+}
+
+.admin-patients {
+  background-image: url('../icons/account/user.png');
+}
+
+.admin-my-patients {
+  background-image: url('../icons/admin/patient.png');
+}
+
+.admin-subordinates {
+  background-image: url('../icons/admin/doctor.png');
+}
+
+.admin-calculator {
+  background-image: url('../icons/admin/calculator.png');
+}
+
+.admin-file {
+  background-image: url('../icons/admin/file.png');
+  border: 0;
+  outline: 0;
+  background-color: unset;
+}
+
+.input-file {
+  width: 1px;
+  height: 1px;
+}
+
+.admin-close {
+  background-image: url('../icons/account/close.png');
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  user-select: none;
+  justify-self: flex-end;
+  cursor: pointer;
+  padding: 0 26px;
+}
+
+.admin-content-container {
+  background-color: #fff;
+  user-select: none;
+  padding: 30px 0px;
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  margin-left: 40px;
+}
+
+.admin-content-title-area {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 60px;
+  align-items: flex-end;
+}
+
+.admin-content-title-area > label {
+  padding-top: 0px !important;
+}
+
+.admin-content-title {
+  user-select: none;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.admin-content-body {
+  padding: 20px 0;
+  display: grid;
+  row-gap: 30px;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 30px;
+}
+
+.table-row,
+.table-row-csv {
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  column-gap: 20px;
+  padding-bottom: 10px;
+  padding-right: 25px;
+  border-bottom: 4px solid #25466e;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.table-row-csv {
+  cursor: auto;
+}
+
+.table-label {
+  font-weight: 500;
+  color: #25466e;
+}
+
+.table-value {
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.admin-pagination {
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  justify-items: center;
+  align-content: center;
+  position: sticky;
+  row-gap: 20px;
+  padding: 0 10px;
+}
+
+.admin-page-up {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+  user-select: none;
+  justify-self: center;
+  outline: none;
+  border: none;
+  background-image: url('../icons/page-arrow.png');
+  cursor: pointer;
+}
+
+.admin-page-number {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  color: black;
+  font-family: 'Roboto Slab';
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+  line-height: 28px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.admin-page-clicked {
+  border: 0;
+  background-color: #25466e;
+  color: white;
+}
+
+.admin-page-down {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+  user-select: none;
+  justify-self: center;
+  outline: none;
+  border: none;
+  background-image: url('../icons/page-arrow.png');
+  cursor: pointer;
+  transform: scaleY(-1);
+}
+
+@media only screen and (max-width: 900px) {
+  .admin-sidebar {
+    width: 350px;
+  }
+
+  .admin-sidebar > .form-row-2-col {
+    column-gap: 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .admin-sidebar {
+    width: 300px;
+  }
+
+  .admin-content-container {
+    padding: 30px 0px 30px 25px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .admin-main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: calc(100vh - 60px);
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+
+  .admin-close {
+    display: none;
+  }
+
+  .admin-content-container {
+    padding: 30px 25px 10px 25px;
+  }
+
+  .admin-content-body {
+    grid-template-columns: 1fr !important;
+  }
+
+  .table-row {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (min-width: 651px) {
+  .admin-sidebar-hidden {
+    width: 75px;
+    padding: 30px 10px;
+    cursor: pointer;
+  }
+
+  .admin-sidebar-hidden > .admin-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .admin-sidebar-hidden > .admin-close {
+    display: none;
+  }
+}

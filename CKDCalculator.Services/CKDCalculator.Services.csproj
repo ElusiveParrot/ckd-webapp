@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>CKDCalculator.Services</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>CKDCalculator.Services</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Azure.Communication.Common" Version="1.2.1" />
+      <PackageReference Include="Azure.Communication.Email" Version="1.0.0-beta.1" />
+      <PackageReference Include="Azure.Communication.Identity" Version="1.2.0" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.27.0" />
+    </ItemGroup>
+
+</Project>
